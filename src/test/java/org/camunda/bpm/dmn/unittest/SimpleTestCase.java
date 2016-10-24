@@ -14,7 +14,6 @@ package org.camunda.bpm.dmn.unittest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
-import static org.junit.Assert.assertEquals;
 
 import java.io.InputStream;
 
