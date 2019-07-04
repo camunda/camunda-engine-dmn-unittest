@@ -7,9 +7,9 @@
 
   <properties>
     <!-- set the version for camunda BPM here -->
-    <version.camunda>7.5.0</version.camunda>
+    <version.camunda>7.11.0</version.camunda>
     <version.junit>4.12</version.junit>
-    <version.assertj>1.7.1</version.assertj>
+    <version.assertj>2.9.1</version.assertj>
   </properties>
 
   <dependencyManagement>
