@@ -7,9 +7,9 @@
 
   <properties>
     <!-- set the version for camunda BPM here -->
-    <version.camunda>7.16.0</version.camunda>
-    <version.junit>4.13.1</version.junit>
-    <version.assertj>3.20.2</version.assertj>
+    <version.camunda>7.17.0</version.camunda>
+    <version.junit>4.13.2</version.junit>
+    <version.assertj>3.21.0</version.assertj>
     <version.slf4j>1.7.32</version.slf4j>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
