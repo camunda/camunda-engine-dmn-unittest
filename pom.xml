@@ -6,13 +6,20 @@
   <packaging>jar</packaging>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <!-- set the version for camunda BPM here -->
-    <version.camunda>7.19.0</version.camunda>
-    <version.junit>4.13.2</version.junit>
-    <version.assertj>3.21.0</version.assertj>
+    <version.camunda>7.20.0</version.camunda>
+    <version.junit>5.10.0</version.junit>
+    <version.assertj>3.24.2</version.assertj>
     <version.slf4j>1.7.36</version.slf4j>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <!-- set the java version here -->
+    <maven.compiler.release>11</maven.compiler.release>
+
+    <!-- set the plugin versions here -->
+    <version.plugin.compiler>3.11.0</version.plugin.compiler>
+    <version.plugin.surefire>3.1.2</version.plugin.surefire>
   </properties>
 
   <dependencyManagement>
@@ -39,27 +46,52 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-jdk14</artifactId>
-      <scope>test</scope>
       <version>${version.slf4j}</version>
+      <scope>test</scope>
     </dependency>
 
     <!-- junit -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit 5 extension -->
+    <dependency>
+      <groupId>org.camunda.bpm.dmn</groupId>
+      <artifactId>camunda-dmn-junit5</artifactId>
+      <version>${version.camunda}</version>
+      <scope>test</scope>
     </dependency>
 
     <!-- assertj -->
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <scope>test</scope>
       <version>${version.assertj}</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${version.plugin.compiler}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${version.plugin.surefire}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
 </project>
 

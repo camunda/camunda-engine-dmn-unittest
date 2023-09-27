@@ -20,27 +20,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
 import java.io.InputStream;
-
 import org.camunda.bpm.dmn.engine.DmnDecision;
 import org.camunda.bpm.dmn.engine.DmnDecisionRuleResult;
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.DmnEngine;
-import org.camunda.bpm.dmn.engine.test.DmnEngineRule;
+import org.camunda.bpm.dmn.engine.test.junit5.DmnEngineExtension;
 import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.Variables;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+@ExtendWith(DmnEngineExtension.class)
 public class SimpleTestCase {
 
-  @Rule
-  public DmnEngineRule rule = new DmnEngineRule();
-
   @Test
-  public void shouldEvaluateDecision() {
-    // Get DMN engine
-    DmnEngine dmnEngine = rule.getDmnEngine();
-
+  public void shouldEvaluateDecision(DmnEngine dmnEngine) {
     // Parse decision
     InputStream inputStream = getClass().getResourceAsStream("Example.dmn");
     DmnDecision decision = dmnEngine.parseDecision("orderDecision", inputStream);
