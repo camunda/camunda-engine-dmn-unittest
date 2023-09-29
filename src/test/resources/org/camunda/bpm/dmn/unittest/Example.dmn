@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:camunda="http://camunda.org/schema/1.0/dmn"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
              id="definitions"
-             name="definitions"
+             name="definitions" 
              namespace="http://camunda.org/schema/1.0/dmn">
-  <decision id="orderDecision" name="Check Order">
+  <decision id="orderDecision" name="Check Order" camunda:historyTimeToLive="180">
     <decisionTable id="decisionTable">
       <input id="input1" label="Customer Status">
         <inputExpression id="inputExpression1" typeRef="string">
@@ -35,7 +38,7 @@
           <text>"notok"</text>
         </outputEntry>
         <outputEntry id="outputEntry2">
-          <text><![CDATA["work on your status first, as bronze you're not going to get anything"]]></text>
+          <text>"work on your status first, as bronze you're not going to get anything"</text>
         </outputEntry>
       </rule>
       <rule id="rule2">
@@ -82,4 +85,11 @@
       </rule>
     </decisionTable>
   </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1l3bghs">
+      <dmndi:DMNShape id="DMNShape_0o10u2v" dmnElementRef="orderDecision">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
 </definitions>
