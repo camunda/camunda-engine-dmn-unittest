@@ -9,9 +9,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- set the version for camunda BPM here -->
-    <version.camunda>7.20.0</version.camunda>
-    <version.junit>5.10.0</version.junit>
-    <version.assertj>3.24.2</version.assertj>
+    <version.camunda>7.21.0</version.camunda>
+    <version.junit>5.10.2</version.junit>
+    <version.assertj>3.25.3</version.assertj>
     <version.slf4j>1.7.36</version.slf4j>
 
     <!-- set the java version here -->
