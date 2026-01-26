@@ -11,7 +11,7 @@
     <!-- set the version for Camunda 7 here -->
     <version.camunda>7.24.0</version.camunda>
     <version.junit>5.12.1</version.junit>
-    <version.assertj>3.27.3</version.assertj>
+    <version.assertj>3.27.7</version.assertj>
     <version.slf4j>2.0.17</version.slf4j>
     <version.jaxb-impl>2.3.6</version.jaxb-impl>
 
